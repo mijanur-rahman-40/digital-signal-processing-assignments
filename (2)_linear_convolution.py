@@ -22,14 +22,14 @@ def linear_convolution(x, y, index_pos_x, index_pos_y):
 
 
 num = input("Give the values of signal x(n): ")
-x_axis = [int(i) for i in num.split()]
-index_pos_x = input(f"Initial index postion for x(n) (0-{len(x_axis)-1}): ")
+x = [int(i) for i in num.split()]
+index_pos_x = input(f"Initial index postion for x(n) (0-{len(x)-1}): ")
 
 num = input("Give the values of signal y(n): ")
-y_axis = [int(i) for i in num.split()]
-index_pos_y = input(f"Initial index postion y(n) (0-{len(y_axis)-1}): ")
+y = [int(i) for i in num.split()]
+index_pos_y = input(f"Initial index postion y(n) (0-{len(y)-1}): ")
 
 arr, result_indexes = linear_convolution(
-    x_axis, y_axis, int(index_pos_x), int(index_pos_y))
+    x, y, int(index_pos_x), int(index_pos_y))
 print('Array of linear_convolution result: ', arr)
 print('Resultant indexes          : ', result_indexes)

@@ -1,11 +1,13 @@
-import math
 import matplotlib.pyplot as plt
 x = range(0, 15)
+
 y = []
 _y = []
+
 # a > 1 or 0 < a < 1
 a = .5
 _a = 1.5
+
 for i in x:
     y.append(a ** i)
 
