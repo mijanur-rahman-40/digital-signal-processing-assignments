@@ -5,7 +5,6 @@ y = [0] * 21
 x = []
 
 for b in range(-10, 11):
-    print(b)
     if b >= 0:
         y[b + 10] = 1
     x.append(b)
