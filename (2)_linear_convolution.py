@@ -39,4 +39,4 @@ for i in range(len(arr)):
     print(f'y({result_indexes[i]}) = {arr[i]}')
 
 print('\nArray of linear_convolution result y(n): ', arr)
-print('Resultant indexes                      : ', result_indexes)
+print('Resultant indexes                        : ', result_indexes)
