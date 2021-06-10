@@ -23,14 +23,14 @@ def cross_correlation(x, y, index_pos_x, index_pos_y):
     return cc, result_indexes
 
 
-x = [2, -1, 3, 7, 1, 2, -3]
-# num = input("Give the values of signal x(n): ")
-# x = [int(i) for i in num.split()]
+# x = [2, -1, 3, 7, 1, 2, -3]
+num = input("Give the values of signal x(n): ")
+x = [int(i) for i in num.split()]
 index_pos_x = input(f"Initial index postion for x(n) (0-{len(x)-1}): ")
 
-y = [1, -1, 2, -2, 4, 1, -2, 5]
-# num = input("Give the values of signal y(n): ")
-# y = [int(i) for i in num.split()]
+# y = [1, -1, 2, -2, 4, 1, -2, 5]
+num = input("Give the values of signal y(n): ")
+y = [int(i) for i in num.split()]
 index_pos_y = input(f"Initial index postion y(n) (0-{len(y)-1}): ")
 
 print('\n')

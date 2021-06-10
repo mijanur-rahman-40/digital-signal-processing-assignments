@@ -41,22 +41,22 @@ class Radix2:
             xn_tmp = [0 + 0j] * self.N
 
             for j in range(0, self.N, 2 ** i):
-                index = []
+                index_array = []
                 for k in range(j, j + 2 ** i):
-                    index.append(k)
+                    index_array.append(k)
 
-                mid_point = index.__len__() // 2
+                mid_point = index_array.__len__() // 2
                 power = 0
                 step = math.log(self.N, 2) - (i - 1)
 
                 for m in range(mid_point):
-                    xn_tmp[index[m]] = \
-                        self.xn1[index[m]] + (self.w ** power) * \
-                        self.xn1[index[m + mid_point]]
+                    xn_tmp[index_array[m]] = \
+                        self.xn1[index_array[m]] + (self.w ** power) * \
+                        self.xn1[index_array[m + mid_point]]
 
-                    xn_tmp[index[m + mid_point]] = \
-                        self.xn1[index[m]] - (self.w ** power) * \
-                        self.xn1[index[m + mid_point]]
+                    xn_tmp[index_array[m + mid_point]] = \
+                        self.xn1[index_array[m]] - (self.w ** power) * \
+                        self.xn1[index_array[m + mid_point]]
                     power += step
 
             self.xn1 = xn_tmp.copy()
@@ -68,7 +68,9 @@ class Radix2:
 
 print('\nN = 8')
 radix = Radix2(8)
+
 # x = [1, 2, 4, 8, 16, 32, 64, 128]
+
 num = input("Give the 8 values of signal x(n): ")
 x = [int(i) for i in num.split()]
 radix.inputs(x)

@@ -1,6 +1,6 @@
 import math
 from scipy.fftpack import fft, ifft
-from dft_5 import DFT
+from dft_5.dft import DFT
 
 
 def IDFT(dft_regular, dft_imaginary):

@@ -33,11 +33,12 @@ def DFT(x):
     return dft_regular, dft_imaginary
 
 
-num = input("Give the values of signal x(n): ")
-x = [int(i) for i in num.split()]
+if __name__ == "__main__":
+    num = input("Give the values of signal x(n): ")
+    x = [int(i) for i in num.split()]
 
-dft_re_array, dft_im_array = DFT(x)
-print("\nDiscreate Fourier Transform :")
+    dft_re_array, dft_im_array = DFT(x)
+    print("\nDiscreate Fourier Transform :")
 
-for i in range(len(dft_re_array)):
-    print(f'X[{i}] : ({dft_re_array[i]} {dft_im_array[i]}j)')
+    for i in range(len(dft_re_array)):
+        print(f'X[{i}] : ({dft_re_array[i]} {dft_im_array[i]}j)')

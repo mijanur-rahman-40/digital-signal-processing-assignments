@@ -6,8 +6,8 @@ def fast_fourier_transform(x):
     if n == 1:
         return x
 
-    left_side = [num for index, num in enumerate(x) if index % 2 == 0]
-    right_side = [num for index, num in enumerate(x) if index % 2 == 1]
+    left_side = [num for i, num in enumerate(x) if i % 2 == 0]
+    right_side = [num for i, num in enumerate(x) if i % 2 == 1]
 
     transformed_left = fast_fourier_transform(left_side)
     transformed_right = fast_fourier_transform(right_side)
@@ -16,10 +16,10 @@ def fast_fourier_transform(x):
     root = 1
 
     results = [0] * n
-    for index in range(0, int(n/2)):
-        results[index] = transformed_left[index] + root * transformed_right[index]
-        results[int(index + n/2)] = transformed_left[index] - \
-            root * transformed_right[index]
+    for i in range(0, int(n/2)):
+        results[i] = transformed_left[i] + root * transformed_right[i]
+        results[int(i + n/2)] = transformed_left[i] - \
+            root * transformed_right[i]
         root = root * inverted_root
     return results
 

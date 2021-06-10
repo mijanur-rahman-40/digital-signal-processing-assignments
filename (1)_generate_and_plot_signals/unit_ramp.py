@@ -11,7 +11,7 @@ for b in range(-10, 11):
 plt.grid(True, which='both')
 
 plt.stem(x, y)
-plt.title('Ramp Signal')
+plt.title('Unit Ramp Signal')
 plt.xlabel('Sample index')
 plt.ylabel('Amplitude')
 plt.show()
