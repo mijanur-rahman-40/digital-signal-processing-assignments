@@ -23,16 +23,25 @@ def cross_correlation(x, y, index_pos_x, index_pos_y):
     return cc, result_indexes
 
 
-num = input("Give the values of signal x(n): ")
-x_axis = [int(i) for i in num.split()]
-index_pos_x = input(f"Initial index postion for x(n) (0-{len(x_axis)-1}): ")
+x = [2, -1, 3, 7, 1, 2, -3]
+# num = input("Give the values of signal x(n): ")
+# x = [int(i) for i in num.split()]
+index_pos_x = input(f"Initial index postion for x(n) (0-{len(x)-1}): ")
 
-num = input("Give the values of signal y(n): ")
-y_axis = [int(i) for i in num.split()]
-index_pos_y = input(f"Initial index postion y(n) (0-{len(y_axis)-1}): ")
+y = [1, -1, 2, -2, 4, 1, -2, 5]
+# num = input("Give the values of signal y(n): ")
+# y = [int(i) for i in num.split()]
+index_pos_y = input(f"Initial index postion y(n) (0-{len(y)-1}): ")
+
+print('\n')
 
 arr, result_indexes = cross_correlation(
-    x_axis, y_axis[::-1], int(index_pos_x), int(index_pos_y))
+    x, y[::-1], int(index_pos_x), int(index_pos_y))
 
-print('Array of cross-correlation result: ', arr)
+for i in range(len(arr)):
+    print(f'rxy({result_indexes[i]}) = {arr[i]}')
+
+print('\nArray of cross-correlation result: ', arr)
 print('Resultant indexes                : ', result_indexes)
+
+

@@ -16,9 +16,12 @@ def fir_filter(x, y):
 
 print('\nResponse will be like linear convolution by means of DFT and IDFT\n')
 
+# x = [1, 2, -1, 5, 6]
+
 num = input("Give the values of signal x(n): ")
 x = [int(i) for i in num.split()]
 
+# h = [5, 6, 7]
 num = input("Give the values of signal h(n): ")
 h = [int(i) for i in num.split()]
 

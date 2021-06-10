@@ -31,5 +31,9 @@ index_pos_x = input(f"Initial index postion for x(n) (0-{len(x_axis)-1}): ")
 arr, result_indexes = auto_correlation(
     x_axis, x_axis[::-1], int(index_pos_x))
 
-print('Array of auto-correlation result: ', arr)
-print('Resultant indexes               : ', result_indexes)
+print('\n')
+for i in range(len(arr)):
+    print(f'x({result_indexes[i]})={arr[i]}')
+
+print('\nArray of auto-correlation result : ', arr)
+print('Resultant indexes                  : ', result_indexes)
